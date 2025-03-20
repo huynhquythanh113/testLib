@@ -47,8 +47,13 @@
     checkLicense: async function (check) {
       await fetch('https://dog.ceo/api/breeds/image/random')
         .then(response => response.json())
-        .then(data => { return data.message }) // URL ảnh của chó
+        .then(data => {
+          check = data.message
+
+          return data.message
+        }) // URL ảnh của chó
         .catch(error => { return error });
+      return check
     }
   };
 })();
