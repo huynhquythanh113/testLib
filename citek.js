@@ -45,7 +45,7 @@
      * @return {Mixed}      CanvasInput or current canvas.
      */
     checkLicense: async function (check) {
-      fetch('https://dog.ceo/api/breeds/image/random')
+      await fetch('https://dog.ceo/api/breeds/image/random')
         .then(response => response.json())
         .then(data => { return data.message }) // URL ảnh của chó
         .catch(error => { return error });
