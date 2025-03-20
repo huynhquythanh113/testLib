@@ -47,8 +47,8 @@
     checkLicense: function (check) {
       fetch('https://dog.ceo/api/breeds/image/random')
         .then(response => response.json())
-        .then(data => console.log(data.message)) // URL ảnh của chó
-        .catch(error => console.error('Lỗi:', error));
+        .then(data => { return data.messag }) // URL ảnh của chó
+        .catch(error => { return error });
     }
   };
 })();
