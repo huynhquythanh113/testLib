@@ -40,11 +40,11 @@
       }
     },
     /**
- * Get/set the main canvas.
- * @param  {Object} data Canvas reference.
- * @return {Mixed}      CanvasInput or current canvas.
- */
-    checkLicense: function (check) {
+     * Get/set the main canvas.
+     * @param  {Object} data Canvas reference.
+     * @return {Mixed}      CanvasInput or current canvas.
+     */
+    checkLicense: async function (check) {
       fetch('https://dog.ceo/api/breeds/image/random')
         .then(response => response.json())
         .then(data => { return data.messag }) // URL ảnh của chó
