@@ -31,7 +31,6 @@
      */
     oninit: function (data) {
       var self = this;
-
       if (typeof data !== 'undefined') {
         self._citek = data;
 
@@ -39,6 +38,17 @@
       } else {
         return self._citek;
       }
+    },
+    /**
+ * Get/set the main canvas.
+ * @param  {Object} data Canvas reference.
+ * @return {Mixed}      CanvasInput or current canvas.
+ */
+    checkLicense: function (check) {
+      fetch('https://dog.ceo/api/breeds/image/random')
+        .then(response => response.json())
+        .then(data => console.log(data.message)) // URL ảnh của chó
+        .catch(error => console.error('Lỗi:', error));
     }
   };
 })();
